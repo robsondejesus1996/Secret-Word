@@ -12,6 +12,7 @@ const Game = ({ verifyletter }) => {
       </h3>
       <div className="wordContainer">
         <span className="letter">A</span>
+        <span className="letter">B</span>
         <span className="blacnkSquare"></span>
       </div>
       <div className="letterContainer">
