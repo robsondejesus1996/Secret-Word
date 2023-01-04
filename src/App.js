@@ -71,8 +71,34 @@ function App() {
 
   //Função para processar os inputs
   const verifyletter = (letter) => {
-    console.log(letter);
+    //normalizar para letra miniscula
+    const normalizedLetter = letter.toLowerCase();
+
+    //validação se a letra ja foi utilizada
+    if (
+      guessedLetters.includes(normalizedLetter) ||
+      wrongLetters.includes(normalizedLetter)
+    ) {
+      return;
+    }
+
+    //Incluir as letra que o usuario adivinha para as letras acertadas ou erradas 
+    if (letters.includes(normalizedLetter)) {
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters,
+        letter,
+      ]);
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters,
+        normalizedLetter,
+      ]);
+
+      setGuesses((actualGuesses) => actualGuesses - 1);
+    }
   };
+
+  console.log(wrongLetters);
 
   // restarts the game
   const retry = () => {
