@@ -1,9 +1,12 @@
-import './Game.css';
+import "./Game.css";
 
-const Game = () => {
+const Game = ({ verifyletter }) => {
   return (
-    <div>Game</div>
-  )
-}
+    <div>
+      <h1>Game</h1>
+      <button onClick={verifyletter}>Finalizar  jogo</button>
+    </div>
+  );
+};
 
-export default Game
+export default Game;
