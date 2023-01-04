@@ -70,7 +70,7 @@ function App() {
   };
 
   //Função para processar os inputs
-  const verifyletter = (letter) => {
+  const verifyLetter = (letter) => {
     //normalizar para letra miniscula
     const normalizedLetter = letter.toLowerCase();
 
@@ -110,7 +110,7 @@ function App() {
       {gameStage === "start" && <StartScren startGame={startGame} />}
       {gameStage === "game" && (
         <Game
-          verifyletter={verifyletter}
+        verifyLetter={verifyLetter}
           pickedWord={pickedWord}
           pickedCategory={pickedCategory}
           letters={letters}
