@@ -18,9 +18,10 @@ const stages = [
   { id: 3, name: "end" },
 ];
 
-
+console.log('Aplicação desenvolvida por Robson de Jesus')
 
 function App() {
+  
   const [gameStage, setGameStage] = useState(stages[0].name);
   const [words] = useState(wordsList);
 
